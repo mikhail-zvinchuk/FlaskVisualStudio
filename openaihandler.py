@@ -2,7 +2,6 @@ from openai import OpenAI
 import logging
 
 
-
 class OpenAIHandler:
     def __init__(self, api_key: str):
         self.api_key = api_key
@@ -20,13 +19,16 @@ class OpenAIHandler:
             response = self.client.chat.completions.create(
                 model="gpt-3.5-turbo",
                 messages=[
-                    {"role": "system", "content": "You are a helpful assistant that translates text."},
-                    {"role": "user", "content": prompt}
+                    {
+                        "role": "system",
+                        "content": "You are a helpful assistant that translates text.",
+                    },
+                    {"role": "user", "content": prompt},
                 ],
-                max_tokens=150,  
+                max_tokens=150,
                 n=1,
                 stop=None,
-                temperature=0.5
+                temperature=0.5,
             )
             return response.choices[0].message.content
 
