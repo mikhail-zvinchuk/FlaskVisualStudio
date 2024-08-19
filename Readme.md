@@ -8,6 +8,7 @@ This is slightly imporved version of code from MSFT Flask tutorial. This is just
 ## 📋 Table of Contents
 
 - [Features](#features)
+- [Diagrams](#diagrams)
 - [Installation](#installation)
 - [Open Questions](#questions)
 - [Contributing](#contributing)
@@ -18,6 +19,28 @@ This is slightly imporved version of code from MSFT Flask tutorial. This is just
 - 🛠️ ** Simple integration with openai
 - Readme.md boiler plate for my public projects
 - Allows prompt injection, so it is fun to mess with. 
+
+## Diagrams
+
+```mermaid
+    sequenceDiagram
+        actor Client
+
+        box "Flask API Facade"
+            participant FlaskApplication as Flask Application
+            participant OpenAIAPI as OpenAI API
+        end
+
+        Client ->> FlaskApplication: user_id, text, language
+    
+        FlaskApplication -->> Client: translated text
+
+        FlaskApplication ->> OpenAIAPI: API Request
+
+
+        OpenAIAPI -->> FlaskApplication: API Response
+
+```
 
 ## 🛠️ Installation
 
