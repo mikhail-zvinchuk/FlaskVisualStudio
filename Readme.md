@@ -35,7 +35,7 @@ This is slightly imporved version of code from MSFT Flask tutorial. This is just
     
         FlaskApplication -->> Client: translated text
 
-        FlaskApplication ->> OpenAIAPI: API Request
+        FlaskApplication ->> OpenAIAPI: model, prompt, max tokens
 
 
         OpenAIAPI -->> FlaskApplication: API Response
