@@ -49,8 +49,8 @@ You can run this using Visual Studio using included sln.
 To get started with this project, clone the repository and install the dependencies:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone mikhail-zvinchuk/FlaskVisualStudio.git
+cd FlaskVisualStudio
 pip install -r requirements.txt
 ```
 
